@@ -1,0 +1,387 @@
+﻿Regions,Longitude,Latitude,Group,ocean_num,Name,Polygon_ind
+"North Pacific Ocean, eastern part",179.99899,0,1,1,NPO_E,1
+"North Pacific Ocean, eastern part",131.04401,0,1,1,NPO_E,2
+"North Pacific Ocean, eastern part",128.67799,0,1,1,NPO_E,3
+"North Pacific Ocean, eastern part",128.558,0,1,1,NPO_E,4
+"North Pacific Ocean, eastern part",126.858,0,1,1,NPO_E,5
+"North Pacific Ocean, eastern part",126.825,0,1,1,NPO_E,6
+"North Pacific Ocean, eastern part",125.611,0,1,1,NPO_E,7
+"North Pacific Ocean, eastern part",125.45,0,1,1,NPO_E,8
+"North Pacific Ocean, eastern part",125.489,0,1,1,NPO_E,9
+"North Pacific Ocean, eastern part",125.329,0,1,1,NPO_E,10
+"North Pacific Ocean, eastern part",125.329,0,1,1,NPO_E,11
+"North Pacific Ocean, eastern part",123.93444,0,1,1,NPO_E,12
+"North Pacific Ocean, eastern part",102.983,0,1,1,NPO_E,13
+"North Pacific Ocean, eastern part",103.383,1.16528,1,1,NPO_E,14
+"North Pacific Ocean, eastern part",103.353,1.19028,1,1,NPO_E,15
+"North Pacific Ocean, eastern part",103.517,1.265,1,1,NPO_E,16
+"North Pacific Ocean, eastern part",103.5,2,1,1,NPO_E,17
+"North Pacific Ocean, eastern part",101.5,6,1,1,NPO_E,18
+"North Pacific Ocean, eastern part",98.9,8.47,1,1,NPO_E,19
+"North Pacific Ocean, eastern part",98.9,12.5,1,1,NPO_E,20
+"North Pacific Ocean, eastern part",98,18,1,1,NPO_E,21
+"North Pacific Ocean, eastern part",95,25,1,1,NPO_E,22
+"North Pacific Ocean, eastern part",50,31,1,1,NPO_E,23
+"North Pacific Ocean, eastern part",119,33,1,1,NPO_E,24
+"North Pacific Ocean, eastern part",119,35,1,1,NPO_E,25
+"North Pacific Ocean, eastern part",117.3,36.8,1,1,NPO_E,26
+"North Pacific Ocean, eastern part",117.3,39.5,1,1,NPO_E,27
+"North Pacific Ocean, eastern part",120.5,41.3,1,1,NPO_E,28
+"North Pacific Ocean, eastern part",122,41.3,1,1,NPO_E,29
+"North Pacific Ocean, eastern part",134,45.8208,1,1,NPO_E,30
+"North Pacific Ocean, eastern part",132,55,1,1,NPO_E,31
+"North Pacific Ocean, eastern part",142,60,1,1,NPO_E,32
+"North Pacific Ocean, eastern part",160,63,1,1,NPO_E,33
+"North Pacific Ocean, eastern part",166.2,63,1,1,NPO_E,34
+"North Pacific Ocean, eastern part",175,65,1,1,NPO_E,35
+"North Pacific Ocean, eastern part",179.99899,66.6,1,1,NPO_E,36
+"North Pacific Ocean, eastern part",179.99899,62.5,1,1,NPO_E,37
+"North Pacific Ocean, eastern part",179.99899,50.9,1,1,NPO_E,38
+"North Pacific Ocean, eastern part",179.99899,0,1,1,NPO_E,39
+"North Pacific Ocean, western part",-179.99899,66.6,2,1,NPO_W,1
+"North Pacific Ocean, western part",-178,67.3,2,1,NPO_W,2
+"North Pacific Ocean, western part",-174.28574,66.05594,2,1,NPO_W,3
+"North Pacific Ocean, western part",-171.06667,66.55,2,1,NPO_W,4
+"North Pacific Ocean, western part",-164.73334,66.55,2,1,NPO_W,5
+"North Pacific Ocean, western part",-164.73334,66.1,2,1,NPO_W,6
+"North Pacific Ocean, western part",-161.22378,65.88359,2,1,NPO_W,7
+"North Pacific Ocean, western part",-155,65,2,1,NPO_W,8
+"North Pacific Ocean, western part",-150,62.5,2,1,NPO_W,9
+"North Pacific Ocean, western part",-137,60,2,1,NPO_W,10
+"North Pacific Ocean, western part",-135,60,2,1,NPO_W,11
+"North Pacific Ocean, western part",-120,47,2,1,NPO_W,12
+"North Pacific Ocean, western part",-113,32,2,1,NPO_W,13
+"North Pacific Ocean, western part",-106.825,23.65,2,1,NPO_W,14
+"North Pacific Ocean, western part",-99,19.36,2,1,NPO_W,15
+"North Pacific Ocean, western part",-90,15,2,1,NPO_W,16
+"North Pacific Ocean, western part",-86,14,2,1,NPO_W,17
+"North Pacific Ocean, western part",-82.27,8.61,2,1,NPO_W,18
+"North Pacific Ocean, western part",-80.7,8.2,2,1,NPO_W,19
+"North Pacific Ocean, western part",-79.5,9.15,2,1,NPO_W,20
+"North Pacific Ocean, western part",-78.4,9.15,2,1,NPO_W,21
+"North Pacific Ocean, western part",-77.7,8,2,1,NPO_W,22
+"North Pacific Ocean, western part",-76,6,2,1,NPO_W,23
+"North Pacific Ocean, western part",-78,0,2,1,NPO_W,24
+"North Pacific Ocean, western part",-179.99899,0,2,1,NPO_W,25
+"North Pacific Ocean, western part",-179.99899,50.9,2,1,NPO_W,26
+"North Pacific Ocean, western part",-179.99899,62.5,2,1,NPO_W,27
+"North Pacific Ocean, western part",-179.99899,66.6,2,1,NPO_W,28
+"South Pacific Ocean, eastern part",179.99899,-48,3,1,SPO_E,1
+"South Pacific Ocean, eastern part",158.36353,-48,3,1,SPO_E,2
+"South Pacific Ocean, eastern part",146.91048,-48,3,1,SPO_E,3
+"South Pacific Ocean, eastern part",146.14106,-48,3,1,SPO_E,4
+"South Pacific Ocean, eastern part",146.824,-43.6444,3,1,SPO_E,5
+"South Pacific Ocean, eastern part",144.683,-40.6819,3,1,SPO_E,6
+"South Pacific Ocean, eastern part",143.923,-40.1567,3,1,SPO_E,7
+"South Pacific Ocean, eastern part",143.95,-39.5833,3,1,SPO_E,8
+"South Pacific Ocean, eastern part",143.50999,-38.8583,3,1,SPO_E,9
+"South Pacific Ocean, eastern part",126.958,-13.7333,3,1,SPO_E,10
+"South Pacific Ocean, eastern part",122.85,-10.9417,3,1,SPO_E,11
+"South Pacific Ocean, eastern part",121.275,-10.825,3,1,SPO_E,12
+"South Pacific Ocean, eastern part",120.458,-10.3153,3,1,SPO_E,13
+"South Pacific Ocean, eastern part",118.933,-9.55,3,1,SPO_E,14
+"South Pacific Ocean, eastern part",118.5,-8.89167,3,1,SPO_E,15
+"South Pacific Ocean, eastern part",116.731,-9.01111,3,1,SPO_E,16
+"South Pacific Ocean, eastern part",116.592,-8.86667,3,1,SPO_E,17
+"South Pacific Ocean, eastern part",115.842,-8.82778,3,1,SPO_E,18
+"South Pacific Ocean, eastern part",115.592,-8.82222,3,1,SPO_E,19
+"South Pacific Ocean, eastern part",115.117,-8.85,3,1,SPO_E,20
+"South Pacific Ocean, eastern part",114.533,-8.775,3,1,SPO_E,21
+"South Pacific Ocean, eastern part",105.242,-6.83889,3,1,SPO_E,22
+"South Pacific Ocean, eastern part",104.556,-5.92778,3,1,SPO_E,23
+"South Pacific Ocean, eastern part",102,0,3,1,SPO_E,24
+"South Pacific Ocean, eastern part",179.99899,0,3,1,SPO_E,25
+"South Pacific Ocean, eastern part",179.99899,-48,3,1,SPO_E,26
+"South Pacific Ocean, eastern part",179.99899,-48,3,1,SPO_E,27
+"South Pacific Ocean, western part",-179.99899,0,4,1,SPO_W,1
+"South Pacific Ocean, western part",-78,0,4,1,SPO_W,2
+"South Pacific Ocean, western part",-69,-19.5,4,1,SPO_W,3
+"South Pacific Ocean, western part",-71,-48,4,1,SPO_W,4
+"South Pacific Ocean, western part",-67.18794,-48,4,1,SPO_W,5
+"South Pacific Ocean, western part",-179.99899,-48,4,1,SPO_W,6
+"South Pacific Ocean, western part",-179.99899,0,4,1,SPO_W,7
+North Atlantic Ocean,5,61,5,2,NAO,1
+North Atlantic Ocean,7.05,60.7,5,2,NAO,2
+North Atlantic Ocean,7.05,57.98,5,2,NAO,3
+North Atlantic Ocean,10,60,5,2,NAO,4
+North Atlantic Ocean,12,60,5,2,NAO,5
+North Atlantic Ocean,12,57.75,5,2,NAO,6
+North Atlantic Ocean,10.597,57.75,5,2,NAO,7
+North Atlantic Ocean,9.36,57.07,5,2,NAO,8
+North Atlantic Ocean,8.61,57.07,5,2,NAO,9
+North Atlantic Ocean,8.61,55.5,5,2,NAO,10
+North Atlantic Ocean,10.03,53.47,5,2,NAO,11
+North Atlantic Ocean,4,50.96,5,2,NAO,12
+North Atlantic Ocean,1.92,50.96,5,2,NAO,13
+North Atlantic Ocean,1.50601,49.86019,5,2,NAO,14
+North Atlantic Ocean,-0.38511,49.11273,5,2,NAO,15
+North Atlantic Ocean,-1.75911,49.55129,5,2,NAO,16
+North Atlantic Ocean,-1.3178,48.60607,5,2,NAO,17
+North Atlantic Ocean,-4,48.25,5,2,NAO,18
+North Atlantic Ocean,-0.4,47,5,2,NAO,19
+North Atlantic Ocean,-0.4,43.1,5,2,NAO,20
+North Atlantic Ocean,-8.45,43.1,5,2,NAO,21
+North Atlantic Ocean,-8.45,37.4,5,2,NAO,22
+North Atlantic Ocean,-6.035,37.4,5,2,NAO,23
+North Atlantic Ocean,-6.035,36.167,5,2,NAO,24
+North Atlantic Ocean,-5.93334,35.75217,5,2,NAO,25
+North Atlantic Ocean,-6.71049,33.8668,5,2,NAO,26
+North Atlantic Ocean,-8.75,32.75,5,2,NAO,27
+North Atlantic Ocean,-8.75,31,5,2,NAO,28
+North Atlantic Ocean,-16,20,5,2,NAO,29
+North Atlantic Ocean,-10.8,7,5,2,NAO,30
+North Atlantic Ocean,-7.728,4.367,5,2,NAO,31
+North Atlantic Ocean,-5.55404,5.48122,5,2,NAO,32
+North Atlantic Ocean,3.14308,6.87822,5,2,NAO,33
+North Atlantic Ocean,10.16518,4.38217,5,2,NAO,34
+North Atlantic Ocean,10.2,-0.6167,5,2,NAO,35
+North Atlantic Ocean,8.7167,-0.6167,5,2,NAO,36
+North Atlantic Ocean,6.4167,0,5,2,NAO,37
+North Atlantic Ocean,-51,0,5,2,NAO,38
+North Atlantic Ocean,-62.46,8.65,5,2,NAO,39
+North Atlantic Ocean,-76.37,7.42,5,2,NAO,40
+North Atlantic Ocean,-77.7,8,5,2,NAO,41
+North Atlantic Ocean,-78.4,9.15,5,2,NAO,42
+North Atlantic Ocean,-79.5,9.15,5,2,NAO,43
+North Atlantic Ocean,-80.7,8.2,5,2,NAO,44
+North Atlantic Ocean,-82.27,8.61,5,2,NAO,45
+North Atlantic Ocean,-86,14,5,2,NAO,46
+North Atlantic Ocean,-90,15,5,2,NAO,47
+North Atlantic Ocean,-94.57031,17.91552,5,2,NAO,48
+North Atlantic Ocean,-98.13548,20.0243,5,2,NAO,49
+North Atlantic Ocean,-97.68851,30.09812,5,2,NAO,50
+North Atlantic Ocean,-82.75,31.2,5,2,NAO,51
+North Atlantic Ocean,-77,44.14,5,2,NAO,52
+North Atlantic Ocean,-61,53.5,5,2,NAO,53
+North Atlantic Ocean,-64.5,60,5,2,NAO,54
+North Atlantic Ocean,-43.917,60,5,2,NAO,55
+North Atlantic Ocean,-41.3,65.6,5,2,NAO,56
+North Atlantic Ocean,-32.18333,67.85,5,2,NAO,57
+North Atlantic Ocean,-24.53889,65.50417,5,2,NAO,58
+North Atlantic Ocean,-22.1,65.75,5,2,NAO,59
+North Atlantic Ocean,-21,65.1,5,2,NAO,60
+North Atlantic Ocean,-20.6,64.5,5,2,NAO,61
+North Atlantic Ocean,-14.96389,64.24028,5,2,NAO,62
+North Atlantic Ocean,-6.24722,62.34306,5,2,NAO,63
+North Atlantic Ocean,-0.88333,61,5,2,NAO,64
+North Atlantic Ocean,5,61,5,2,NAO,65
+South Atlantic Ocean,-51,0,6,2,SAO,1
+South Atlantic Ocean,6.4167,0,6,2,SAO,2
+South Atlantic Ocean,8.7167,-0.6167,6,2,SAO,3
+South Atlantic Ocean,15,-0.6167,6,2,SAO,4
+South Atlantic Ocean,20,-34.833,6,2,SAO,5
+South Atlantic Ocean,20,-48,6,2,SAO,6
+South Atlantic Ocean,20.09534,-48,6,2,SAO,8
+South Atlantic Ocean,20.07398,-48,6,2,SAO,9
+South Atlantic Ocean,-2.79509,-48,6,2,SAO,10
+South Atlantic Ocean,-10.43026,-48,6,2,SAO,11
+South Atlantic Ocean,-36.15233,-48,6,2,SAO,12
+South Atlantic Ocean,-47.28803,-48,6,2,SAO,13
+South Atlantic Ocean,-62.8334,-48,6,2,SAO,14
+South Atlantic Ocean,-61.5,-48,6,2,SAO,15
+South Atlantic Ocean,-65.63276,-48,6,2,SAO,16
+South Atlantic Ocean,-67.18794,-48,6,2,SAO,17
+South Atlantic Ocean,-67.267,-48,6,2,SAO,18
+South Atlantic Ocean,-68.608,-48,6,2,SAO,19
+South Atlantic Ocean,-68.356,-48,6,2,SAO,20
+South Atlantic Ocean,-71,-48,6,2,SAO,21
+South Atlantic Ocean,-51,0,6,2,SAO,22
+Indian Ocean,31,30,7,3,IO,1
+Indian Ocean,33,30,7,3,IO,2
+Indian Ocean,50,31,7,3,IO,3
+Indian Ocean,95,25,7,3,IO,4
+Indian Ocean,98,18,7,3,IO,5
+Indian Ocean,98.9,12.5,7,3,IO,6
+Indian Ocean,98.9,8.47,7,3,IO,7
+Indian Ocean,101.5,6,7,3,IO,8
+Indian Ocean,103.5,2,7,3,IO,9
+Indian Ocean,103.517,1.265,7,3,IO,10
+Indian Ocean,103.353,1.19028,7,3,IO,11
+Indian Ocean,103.383,1.16528,7,3,IO,12
+Indian Ocean,102.983,1.09444,7,3,IO,13
+Indian Ocean,102,0,7,3,IO,14
+Indian Ocean,104.556,-5.92778,7,3,IO,15
+Indian Ocean,105.242,-6.83889,7,3,IO,16
+Indian Ocean,114.533,-8.775,7,3,IO,17
+Indian Ocean,115.117,-8.85,7,3,IO,18
+Indian Ocean,115.592,-8.82222,7,3,IO,19
+Indian Ocean,115.842,-8.82778,7,3,IO,20
+Indian Ocean,116.592,-8.86667,7,3,IO,21
+Indian Ocean,116.731,-9.01111,7,3,IO,22
+Indian Ocean,118.5,-8.89167,7,3,IO,23
+Indian Ocean,118.933,-9.55,7,3,IO,24
+Indian Ocean,120.458,-10.3153,7,3,IO,25
+Indian Ocean,121.275,-10.825,7,3,IO,26
+Indian Ocean,122.85,-10.9417,7,3,IO,27
+Indian Ocean,126.958,-13.7333,7,3,IO,28
+Indian Ocean,143.50999,-38.8583,7,3,IO,29
+Indian Ocean,143.95,-39.5833,7,3,IO,30
+Indian Ocean,143.923,-40.1567,7,3,IO,31
+Indian Ocean,144.683,-40.6819,7,3,IO,32
+Indian Ocean,146.824,-43.6444,7,3,IO,33
+Indian Ocean,146.14106,-48,7,3,IO,34
+Indian Ocean,146.91048,-48,7,3,IO,35
+Indian Ocean,108.70691,-48,7,3,IO,36
+Indian Ocean,83.93493,-48,7,3,IO,37
+Indian Ocean,67.04725,-48,7,3,IO,38
+Indian Ocean,50.06435,-48,7,3,IO,39
+Indian Ocean,35.06174,-48,7,3,IO,40
+Indian Ocean,20.07398,-48,7,3,IO,41
+Indian Ocean,20.09534,-48,7,3,IO,42
+Indian Ocean,20,-48,7,3,IO,43
+Indian Ocean,20,-48,7,3,IO,44
+Indian Ocean,20,-34.833,7,3,IO,45
+Indian Ocean,31.5,-25.7,7,3,IO,46
+Indian Ocean,33.5,-20,7,3,IO,47
+Indian Ocean,38.5,-15,7,3,IO,48
+Indian Ocean,37.5,-4.5,7,3,IO,49
+Indian Ocean,50,10.09,7,3,IO,50
+Indian Ocean,41,10.09,7,3,IO,51
+Indian Ocean,38.6,15,7,3,IO,52
+Indian Ocean,36.5,19,7,3,IO,53
+Indian Ocean,31,30,7,3,IO,54
+Arctic Ocean,179.99899,90,8,4,ArcO,1
+Arctic Ocean,179.99899,66.6,8,4,ArcO,2
+Arctic Ocean,175,65,8,4,ArcO,3
+Arctic Ocean,166.2,63,8,4,ArcO,4
+Arctic Ocean,160,63,8,4,ArcO,5
+Arctic Ocean,142,60,8,4,ArcO,6
+Arctic Ocean,140,60,8,4,ArcO,7
+Arctic Ocean,130,60,8,4,ArcO,8
+Arctic Ocean,120,60,8,4,ArcO,9
+Arctic Ocean,110,60,8,4,ArcO,10
+Arctic Ocean,100,60,8,4,ArcO,11
+Arctic Ocean,90,60,8,4,ArcO,12
+Arctic Ocean,80,60,8,4,ArcO,13
+Arctic Ocean,70,60,8,4,ArcO,14
+Arctic Ocean,60,60,8,4,ArcO,15
+Arctic Ocean,50,60,8,4,ArcO,16
+Arctic Ocean,40,60,8,4,ArcO,17
+Arctic Ocean,17.5,68,8,4,ArcO,18
+Arctic Ocean,11.4,63.6,8,4,ArcO,19
+Arctic Ocean,7.05,60.7,8,4,ArcO,20
+Arctic Ocean,5,61,8,4,ArcO,21
+Arctic Ocean,0.001,61,8,4,ArcO,22
+Arctic Ocean,-0.001,61,8,4,ArcO,23
+Arctic Ocean,-0.88333,61,8,4,ArcO,24
+Arctic Ocean,-6.24722,62.34306,8,4,ArcO,25
+Arctic Ocean,-14.96389,64.24028,8,4,ArcO,26
+Arctic Ocean,-20.6,64.5,8,4,ArcO,27
+Arctic Ocean,-21,65.1,8,4,ArcO,28
+Arctic Ocean,-22.1,65.75,8,4,ArcO,29
+Arctic Ocean,-24.53889,65.50417,8,4,ArcO,30
+Arctic Ocean,-32.18333,67.85,8,4,ArcO,31
+Arctic Ocean,-41.3,65.6,8,4,ArcO,32
+Arctic Ocean,-43.917,60,8,4,ArcO,33
+Arctic Ocean,-64.5,60,8,4,ArcO,34
+Arctic Ocean,-66.04525,57.88804,8,4,ArcO,35
+Arctic Ocean,-68.6458,57.68218,8,4,ArcO,36
+Arctic Ocean,-70.90895,60.43743,8,4,ArcO,37
+Arctic Ocean,-78.1,62.36667,8,4,ArcO,38
+Arctic Ocean,-78.1,62.36667,8,4,ArcO,39
+Arctic Ocean,-76.37482,56.27745,8,4,ArcO,40
+Arctic Ocean,-78.25947,52.26155,8,4,ArcO,41
+Arctic Ocean,-79.71387,50.81118,8,4,ArcO,42
+Arctic Ocean,-89.10937,54.85678,8,4,ArcO,43
+Arctic Ocean,-96.14887,58.33666,8,4,ArcO,44
+Arctic Ocean,-100,60,8,4,ArcO,45
+Arctic Ocean,-120,60,8,4,ArcO,46
+Arctic Ocean,-130,61,8,4,ArcO,47
+Arctic Ocean,-140,63,8,4,ArcO,48
+Arctic Ocean,-150,65,8,4,ArcO,49
+Arctic Ocean,-155,65,8,4,ArcO,50
+Arctic Ocean,-161.22378,65.88359,8,4,ArcO,51
+Arctic Ocean,-164.73334,66.1,8,4,ArcO,52
+Arctic Ocean,-164.73334,66.55,8,4,ArcO,53
+Arctic Ocean,-171.06667,66.55,8,4,ArcO,54
+Arctic Ocean,-174.28574,66.05594,8,4,ArcO,55
+Arctic Ocean,-178,67.3,8,4,ArcO,56
+Arctic Ocean,-179.99899,68.956,8,4,ArcO,57
+Arctic Ocean,-179.99899,71.53333,8,4,ArcO,58
+Arctic Ocean,-179.99899,76,8,4,ArcO,59
+Arctic Ocean,-179.99899,90,8,4,ArcO,60
+Arctic Ocean,0,90,8,4,ArcO,61
+Arctic Ocean,179.99899,90,8,4,ArcO,62
+Southern Ocean,-179.99899,-60,9,5,SO,1
+Southern Ocean,-179.99899,-90,9,5,SO,2
+Southern Ocean,-164.73334,-90,9,5,SO,3
+Southern Ocean,-150,-90,9,5,SO,4
+Southern Ocean,-90,-90,9,5,SO,5
+Southern Ocean,-60,-90,9,5,SO,6
+Southern Ocean,-30,-90,9,5,SO,7
+Southern Ocean,0,-90,9,5,SO,8
+Southern Ocean,30,-90,9,5,SO,9
+Southern Ocean,60,-90,9,5,SO,10
+Southern Ocean,90,-90,9,5,SO,11
+Southern Ocean,120,-90,9,5,SO,12
+Southern Ocean,150,-90,9,5,SO,13
+Southern Ocean,179.99899,-90,9,5,SO,14
+Southern Ocean,179.99899,-60,9,5,SO,15
+Southern Ocean,-179.99899,-60,9,5,SO,16
+Baltic Sea,10.597,57.75,10,6,Baltic Sea,1
+Baltic Sea,12,57.75,10,6,Baltic Sea,2
+Baltic Sea,14.46844,56.53456,10,6,Baltic Sea,3
+Baltic Sea,17.02052,60.65567,10,6,Baltic Sea,4
+Baltic Sea,17.24924,62.49869,10,6,Baltic Sea,5
+Baltic Sea,21.96516,65.84361,10,6,Baltic Sea,6
+Baltic Sea,23.89705,65.99929,10,6,Baltic Sea,7
+Baltic Sea,25.79887,65.50189,10,6,Baltic Sea,8
+Baltic Sea,25.72977,64.8689,10,6,Baltic Sea,9
+Baltic Sea,21.603,62.81886,10,6,Baltic Sea,10
+Baltic Sea,22.897,59.808,10,6,Baltic Sea,11
+Baltic Sea,24.8,60.5,10,6,Baltic Sea,12
+Baltic Sea,29,61,10,6,Baltic Sea,13
+Baltic Sea,30.5,59.8,10,6,Baltic Sea,14
+Baltic Sea,28,59.228,10,6,Baltic Sea,15
+Baltic Sea,23.517,59.228,10,6,Baltic Sea,16
+Baltic Sea,24.67,58.37,10,6,Baltic Sea,17
+Baltic Sea,24.67,57.21,10,6,Baltic Sea,18
+Baltic Sea,23.63,56.84,10,6,Baltic Sea,19
+Baltic Sea,22,57,10,6,Baltic Sea,20
+Baltic Sea,21.4,55,10,6,Baltic Sea,21
+Baltic Sea,20,54,10,6,Baltic Sea,22
+Baltic Sea,15.4,54,10,6,Baltic Sea,23
+Baltic Sea,14.3345,53.47476,10,6,Baltic Sea,24
+Baltic Sea,13,54.2,10,6,Baltic Sea,25
+Baltic Sea,12,54,10,6,Baltic Sea,26
+Baltic Sea,11.4,53.83,10,6,Baltic Sea,27
+Baltic Sea,10.74,53.83,10,6,Baltic Sea,28
+Baltic Sea,10.6,54,10,6,Baltic Sea,29
+Baltic Sea,10.6,54.25,10,6,Baltic Sea,30
+Baltic Sea,10,54.25,10,6,Baltic Sea,31
+Baltic Sea,9.3,54.72,10,6,Baltic Sea,32
+Baltic Sea,9.3,55.697,10,6,Baltic Sea,33
+Baltic Sea,10.031,55.697,10,6,Baltic Sea,34
+Baltic Sea,10.031,57,10,6,Baltic Sea,35
+Baltic Sea,10.597,57.75,10,6,Baltic Sea,36
+Mediterranean Region,-6.035,36.167,11,6,Mediterranean Region,1
+Mediterranean Region,5,45,11,6,Mediterranean Region,2
+Mediterranean Region,10,45,11,6,Mediterranean Region,3
+Mediterranean Region,15,47.5,11,6,Mediterranean Region,4
+Mediterranean Region,42.5,47.5,11,6,Mediterranean Region,5
+Mediterranean Region,42.5,36,11,6,Mediterranean Region,6
+Mediterranean Region,36.5,31.5,11,6,Mediterranean Region,7
+Mediterranean Region,32,30,11,6,Mediterranean Region,8
+Mediterranean Region,13,30,11,6,Mediterranean Region,9
+Mediterranean Region,9.1,34.9,11,6,Mediterranean Region,10
+Mediterranean Region,-1.2786,34.99906,11,6,Mediterranean Region,11
+Mediterranean Region,-5,34.9,11,6,Mediterranean Region,12
+Mediterranean Region,-5.925,35.5,11,6,Mediterranean Region,13
+Mediterranean Region,-5.93334,35.75217,11,6,Mediterranean Region,14
+Mediterranean Region,-6.035,36.167,11,6,Mediterranean Region,15
+Antarctic Circumpolar Circulation,-179.99899,-48,12,7,ACC,1
+Antarctic Circumpolar Circulation,-179.99899,-60,12,7,ACC,2
+Antarctic Circumpolar Circulation,-164.73334,-60,12,7,ACC,3
+Antarctic Circumpolar Circulation,-150,-60,12,7,ACC,4
+Antarctic Circumpolar Circulation,-90,-60,12,7,ACC,5
+Antarctic Circumpolar Circulation,-60,-60,12,7,ACC,6
+Antarctic Circumpolar Circulation,-30,-60,12,7,ACC,7
+Antarctic Circumpolar Circulation,0,-60,12,7,ACC,8
+Antarctic Circumpolar Circulation,30,-60,12,7,ACC,9
+Antarctic Circumpolar Circulation,60,-60,12,7,ACC,10
+Antarctic Circumpolar Circulation,90,-60,12,7,ACC,11
+Antarctic Circumpolar Circulation,120,-60,12,7,ACC,12
+Antarctic Circumpolar Circulation,150,-60,12,7,ACC,13
+Antarctic Circumpolar Circulation,179.99899,-60,12,7,ACC,14
+Antarctic Circumpolar Circulation,179.99899,-48,12,7,ACC,15
+Antarctic Circumpolar Circulation,-179.99899,-48,12,7,ACC,16
