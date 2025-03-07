@@ -1,4 +1,5 @@
 # Dynamic-Bayesian-SPT-Model
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.14991365.svg)](https://doi.org/10.5281/zenodo.14991365)
 
 **1:** Reduce the resolution of optical classes, chlorophyll, and Longhurst regions data sets.
 
@@ -17,4 +18,3 @@
 **6:** Model comparisons and diagnose result.
 
 **7:** Supporting infomation analysis and visualization
-
