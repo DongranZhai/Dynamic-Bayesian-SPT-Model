@@ -33,7 +33,27 @@ lon <- seq(-179.5,179.5,5)
 lat <- seq(-89.5,89.5,5)
 save(chl_res,lon,lat,file="occci_chl_5res.Rdata")
 
-####################### Part II. Longhurst #######################
+####################### Part II. Optical class #######################
+load("/Users/doris_zhai/Coding/Dynamic_SPT/reduce_res/oc_rm_coastal_res.Rdata")
+# create function
+getmode <- function(v) {
+  uniqv <- unique(v)
+  uniqv[which.max(tabulate(match(v, uniqv)))]
+}
+oc_fix <- array(NA,dim=c(72,36))
+for(i in 1:72){
+  for(j in 1:36){
+    temp <- oc_glts[i,j,]
+    ind <- getmode(temp)
+    oc_fix[i,j] <- ind
+  }
+}
+lat <- seq(-89.5,89.5,by = 5)
+lon <- seq(-179.5,179.5,by = 5)
+savename <- paste0("oc_dynamic_fix_5res.Rdata")
+save(oc_glts,monoc,oc_fix,lon,lat,file=savename)
+
+####################### Part III. Longhurst #######################
 temp <- readMat("~/Coding/Dynamic_SPT/map_data/Longhurst_180.mat") #used to identify longhursst regions
 Longhurst <- temp$Longhurst
 ## reduce resolution
