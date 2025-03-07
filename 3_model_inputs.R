@@ -1,27 +1,8 @@
-# Nov.16.2024
-# DSTC to 27 classes
-# Aug.13.2024
-# Remove coastal region
-# July.24.2024
-# 
-# July.10.2024
-# Note: This script is about generating a data frame, which contains:
-#       optical class and chl data. (Global)
-#       I. Extract global raster of chl and oc.
-#       III. Create data frame contains global.
-#       IV. (optional) check plot
-
 library(sp)
 library(raster)
 library(oceanmap)
 library(dplyr)
 library(zoo)
-# library(bmstdr)
-# library(spTDyn)
-# library(maptools)
-# library(ggplot2)
-# library(reshape2)
-# library(spTimer)
 
 ########## Part I. Create data frame ##########
 rm(list=ls())
@@ -104,39 +85,11 @@ for(i in c(1:2592)){
 global_no_na <- sptmodel_df
 save(global_df,global_no_na,file="global_chl_oc_res_66_df.Rdata")
 
-# temp <- global_df[which(global_df$ocfix == 1),]
-# table(temp$oc)
-# table(global_df$oc)
-# sum(table(global_df$oc))
-# table(global_df$ocfix)
-# sum(table(global_df$ocfix))
-########## Part II. Partition SPTMODEL dataframe on OC ##########
+  
+########## Part II. Partition SPTMODEL dataframe on Optical class ##########
 rm(list=ls())
 setwd("~/Coding/Dynamic_SPT/reduce_res/task_partition_42")
 load("~/Coding/Dynamic_SPT/reduce_res/global_chl_oc_res_66_df.Rdata")
-### remove rows containing NA
-# Got: global_df,global_no_na
-# sptmodel_df <- global_df
-# #keep na with longhurst
-# na.ind <- sptmodel_df$s.index[which(is.na(sptmodel_df$long))]
-# na.ind <- na.ind[!duplicated(na.ind)]
-# sptmodel_df <- 
-#   sptmodel_df %>%  filter(!s.index %in% na.ind)
-
-# sum(is.na(sptmodel_df$long))
-# sum(is.na(sptmodel_df$chl))
-# sum(is.na(sptmodel_df$oc))
-# sum(is.na(sptmodel_df$ocfix))
-# 
-# sum(is.na(global_df$long))
-# sum(is.na(global_df$chl))
-# sum(is.na(global_df$oc))
-# sum(is.na(global_df$ocfix))
-
-# na.ind <- sptmodel_df$s.index[which(is.na(sptmodel_df$chl))]
-# na.ind <- na.ind[!duplicated(na.ind)]
-# sptmodel_df <-
-#   sptmodel_df %>%  filter(!s.index %in% na.ind)
 
 # create function
 getmode <- function(v) {
@@ -169,97 +122,6 @@ for(i in task_class){
   save(sptmodel_df.sub,file = savename)
 }
 
-# special cases 2+10,23+29,33+35+38,46+49(abondon).
-rm(list=ls())
-setwd("/Users/doris_zhai/Coding/Dynamic_SPT/reduce_res/task_partition_42")
-
-load("/Users/doris_zhai/Coding/Dynamic_SPT/reduce_res/task_partition_42/2_dynamic_res_input.Rdata")
-temp <- sptmodel_df.sub
-load("/Users/doris_zhai/Coding/Dynamic_SPT/reduce_res/task_partition_42/10_dynamic_res_input.Rdata")
-sptmodel_df.sub <- rbind(temp,sptmodel_df.sub)
-save(file=paste("210_dynamic_res_input.Rdata"),sptmodel_df.sub)
-
-load("/Users/doris_zhai/Coding/Dynamic_SPT/reduce_res/task_partition_42/23_dynamic_res_input.Rdata")
-temp <- sptmodel_df.sub
-load("/Users/doris_zhai/Coding/Dynamic_SPT/reduce_res/task_partition_42/29_dynamic_res_input.Rdata")
-sptmodel_df.sub <- rbind(temp,sptmodel_df.sub)
-save(file=paste("2329_dynamic_res_input.Rdata"),sptmodel_df.sub)
-
-load("/Users/doris_zhai/Coding/Dynamic_SPT/reduce_res/task_partition_42/33_dynamic_res_input.Rdata")
-temp <- sptmodel_df.sub
-load("/Users/doris_zhai/Coding/Dynamic_SPT/reduce_res/task_partition_42/35_dynamic_res_input.Rdata")
-temp <- rbind(temp,sptmodel_df.sub)
-# temp <- sptmodel_df.sub
-load("/Users/doris_zhai/Coding/Dynamic_SPT/reduce_res/task_partition_42/38_dynamic_res_input.Rdata")
-sptmodel_df.sub <- rbind(temp,sptmodel_df.sub)
-save(file=paste("3358_dynamic_res_input.Rdata"),sptmodel_df.sub)
-
-# scp -r /Users/doris_zhai/Coding/Dynamic_SPT/reduce_res/task_partition_42/ dzhai@storm.pmc.ucsc.edu:/home/dzhai/reduce_res/task_partition_42
-
-# long
-load("/Users/doris_zhai/Coding/Dynamic_SPT/reduce_res/task_partition_42/5_dynamic_res_input.Rdata")
-# ind <- which(is.na(sptmodel_df.sub$long))
-# sptmodel_df.sub[ind,] <- NA
-na.ind<- sptmodel_df.sub$s.index[which(is.na(sptmodel_df.sub$long))]
-na.ind <- na.ind[!duplicated(na.ind)]
-sptmodel_df.sub <-
-  sptmodel_df.sub %>%  filter(!s.index %in% na.ind)
-save(file=paste("5_dynamic_res_input.Rdata"),sptmodel_df.sub)
-
-load("/Users/doris_zhai/Coding/Dynamic_SPT/reduce_res/task_partition_42/44_dynamic_res_input.Rdata")
-# ind <- which(is.na(sptmodel_df.sub$long))
-# sptmodel_df.sub[ind,] <- NA
-na.ind<- sptmodel_df.sub$s.index[which(is.na(sptmodel_df.sub$long))]
-na.ind <- na.ind[!duplicated(na.ind)]
-sptmodel_df.sub <-
-  sptmodel_df.sub %>%  filter(!s.index %in% na.ind)
-save(file=paste("44_dynamic_res_input.Rdata"),sptmodel_df.sub)
-
-load("/Users/doris_zhai/Coding/Dynamic_SPT/reduce_res/task_partition_42/8_dynamic_res_input.Rdata")
-# ind <- which(is.na(sptmodel_df.sub$long))
-# sptmodel_df.sub[ind,] <- NA
-na.ind<- sptmodel_df.sub$s.index[which(is.na(sptmodel_df.sub$long))]
-na.ind <- na.ind[!duplicated(na.ind)]
-sptmodel_df.sub <-
-  sptmodel_df.sub %>%  filter(!s.index %in% na.ind)
-save(file=paste("8_dynamic_res_input.Rdata"),sptmodel_df.sub)
-
-load("/Users/doris_zhai/Coding/Dynamic_SPT/reduce_res/task_partition_42/27_dynamic_res_input.Rdata")
-# ind <- which(is.na(sptmodel_df.sub$long))
-# sptmodel_df.sub[ind,] <- NA
-na.ind<- sptmodel_df.sub$s.index[which(is.na(sptmodel_df.sub$long))]
-na.ind <- na.ind[!duplicated(na.ind)]
-sptmodel_df.sub <-
-  sptmodel_df.sub %>%  filter(!s.index %in% na.ind)
-save(file=paste("27_dynamic_res_input.Rdata"),sptmodel_df.sub)
-
-load("/Users/doris_zhai/Coding/Dynamic_SPT/reduce_res/task_partition_42/18_dynamic_res_input.Rdata")
-# ind <- which(is.na(sptmodel_df.sub$long))
-# sptmodel_df.sub[ind,] <- NA
-na.ind<- sptmodel_df.sub$s.index[which(is.na(sptmodel_df.sub$long))]
-na.ind <- na.ind[!duplicated(na.ind)]
-sptmodel_df.sub <-
-  sptmodel_df.sub %>%  filter(!s.index %in% na.ind)
-save(file=paste("18_dynamic_res_input.Rdata"),sptmodel_df.sub)
-
-load("/Users/doris_zhai/Coding/Dynamic_SPT/reduce_res/task_partition_42/37_dynamic_res_input.Rdata")
-# ind <- which(is.na(sptmodel_df.sub$long))
-# sptmodel_df.sub[ind,] <- NA
-na.ind<- sptmodel_df.sub$s.index[which(is.na(sptmodel_df.sub$long))]
-na.ind <- na.ind[!duplicated(na.ind)]
-sptmodel_df.sub <-
-  sptmodel_df.sub %>%  filter(!s.index %in% na.ind)
-save(file=paste("37_dynamic_res_input.Rdata"),sptmodel_df.sub)
-
-load("/Users/doris_zhai/Coding/Dynamic_SPT/reduce_res/task_partition_42/47_dynamic_res_input.Rdata")
-# ind <- which(is.na(sptmodel_df.sub$long))
-# sptmodel_df.sub[ind,] <- NA
-na.ind<- sptmodel_df.sub$s.index[which(is.na(sptmodel_df.sub$long))]
-na.ind <- na.ind[!duplicated(na.ind)]
-sptmodel_df.sub <-
-  sptmodel_df.sub %>%  filter(!s.index %in% na.ind)
-save(file=paste("47_dynamic_res_input.Rdata"),sptmodel_df.sub)
-
 ########## Part II. Partition SPTMODEL dataframe on Longhurst ##########
 rm(list=ls())
 setwd("~/Coding/Dynamic_SPT/reduce_res/long_partition")
@@ -273,15 +135,6 @@ na.ind <- na.ind[!duplicated(na.ind)]
 sptmodel_df <-
   sptmodel_df %>%  filter(!s.index %in% na.ind)
 
-# sum(is.na(sptmodel_df$long))
-# sum(is.na(sptmodel_df$chl))
-# sum(is.na(sptmodel_df$oc))
-# sum(is.na(sptmodel_df$ocfix))
-# 
-# sum(is.na(global_df$long))
-# sum(is.na(global_df$chl))
-# sum(is.na(global_df$oc))
-# sum(is.na(global_df$ocfix))
 na.ind.1 <- sptmodel_df$s.index[which(is.na(sptmodel_df$chl))]
 na.ind.1 <- na.ind.1[!duplicated(na.ind.1)]
 sptmodel_df <- 
@@ -317,19 +170,7 @@ for(i in 1:length(table(sptmodel_df$ocfix))){
   save(sptmodel_df.sub,file = savename)
 }
 
-# # special cases 1,9,16,19,23
-# rm(list=ls())
-# setwd("~/Coding/Dynamic_SPT/reduce_res/task_partition")
-# for(j in c(1,9,16,19,23)){
-#   filename <- paste0(j,"_dynamic_res_input.Rdata")
-#   load(filename)
-#   ind <- which(is.na(sptmodel_df.sub$oc))
-#   sptmodel_df.sub$oc[ind] <- sptmodel_df.sub$Longhurst[ind]
-#   # sptmodel_df.sub <- na.omit(sptmodel_df.sub)
-#   save(sptmodel_df.sub,file = filename)
-# }
-
-########## Part IV. Check plot ##########
+########## Part IV. Check plotting ##########
 ### Longhurst
 optical_palette <- c('1'='#9C27B0','2'='#512DA8','3'='#3742fa','4'='#448AFF','5'='#00BCD4','6'='#B2EBF2',
                      '7'='#32ff7e','8'='#badc58','9'='#FFEB3B','10'='#f78fb3','11'='#ffbe76','12'='#FFA000',
@@ -425,36 +266,3 @@ p <- ggplot() +
 
 savename <- paste0('chl_',class_number,'.png') # npsg
 ggsave(savename,width=8.27, height=3.44, dpi=300)
-
-##### OC
-# load("/Users/doris_zhai/Coding/Dynamic_SPT/reduce_res/oc_dynamic_fix_5res.Rdata")
-# oc <- oc_glts
-# load("/Users/doris_zhai/Coding/Dynamic_SPT/reduce_res/oc_dynamic_res.Rdata")
-# load("~/Coding/Dynamic_SPT/reduce_res/gsoc24_df_res.Rdata")
-# oc_result <- oc_result[,-c(4:5)]
-# # create spatial points data frame
-# coordinates(oc_result) <- ~ lon + lat
-# # coerce to SpatialPixelsDataFrame
-# gridded(oc_result) <- T
-# # coerce to raster
-# temp <- raster(oc_result)
-# oc_mat <- raster2matrix(temp)
-# rm(list=c("temp","oc_result"))
-# # check if import is right
-# table(oc_mat)
-# oc <- oc_mat
-# coast_ind <- which(oc==11 | oc==12 | oc==13 | oc==14)
-# oc[coast_ind] <- NA
-
-# for(j in c(2,10)){
-#   filename <- paste0(j,"_dynamic_res_input.Rdata")
-#   load(filename)
-#   temp <- sptmodel_df.sub
-#   sptmodel_df.sub <- rbind(sptmodel_df.sub)
-#   ind <- which(is.na(sptmodel_df.sub$oc))
-#   sptmodel_df.sub$oc[ind] <- sptmodel_df.sub$ocfix[ind]
-#   # sptmodel_df.sub <- na.omit(sptmodel_df.sub)
-#   save(sptmodel_df.sub,file = filename)
-# }
-# interp.ind <- which(sptmodel_df$s.index==i)
-# sptmodel_df$chl[interp.ind] <- na.approx(sptmodel_df$chl[interp.ind])
