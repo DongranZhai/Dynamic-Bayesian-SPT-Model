@@ -1,10 +1,5 @@
-# Aug.21:
-# Without interpolation, then only keep 27 optical class.
-# That is exclude coastal and polar region.
-# Aug.14.2024: change to 28 gsoc with interpolation
-# July.11.2024
 # Note: Build the Bayesian spatiotemporal model with dynamic optical class.
-#       I. Parallel Computation of DSTC
+#       Parallel Computation of DSTC
 
 library(bmstdr)
 library(spTDyn)
@@ -19,7 +14,6 @@ library(doParallel)
 library(SimDesign)
 library(hydroGOF) #nrmse
 
-# scp -r ~/Coding/Dynamic_SPT/reduce_res/task_partition_42/ dzhai@storm.pmc.ucsc.edu:/home/dzhai/reduce_res/
 rm(list=ls())
 setwd("/home/dzhai/reduce_res/dstc_42")
 # task_class <-  c(64, 60, 55, 51, 56, 18, 19,
@@ -83,27 +77,11 @@ doParallelIteration <- function(i){
 # no_cores <- detectCores()
 ##### run
 registerDoParallel(15)
-foreach(i=iter(c(64, 60, 55, 51, 56, 18, 19, 14, 37, 47, 15, 48, 13, 33),.packages="bmstdr")) %dopar% {
+foreach(i=iter(task_class,.packages="bmstdr")) %dopar% {
   doParallelIteration(i)
 }
 
-registerDoParallel(15)
-foreach(i=iter(c(32, 34, 38, 42, 44, 43, 11, 45, 16, 35,  9,  8, 22, 25),.packages="bmstdr")) %dopar% {
-  doParallelIteration(i)
-}
-
-registerDoParallel(10)
-foreach(i=iter(c(27, 28,  3,  5,  6,  4, 21, 2, 24, 23, 49, 46, 10, 29),.packages="bmstdr")) %dopar% {
-  doParallelIteration(i)
-}
-
-registerDoParallel(3)
-foreach(i=iter(c(210,2329,3358),.packages="bmstdr")) %dopar% {
-  doParallelIteration(i)
-}
-#scp -r dzhai@storm.pmc.ucsc.edu:/home/dzhai/reduce_res/dstc_42 ~/Coding/Dynamic_SPT/reduce_res/dstc/
 ########## Part II. Iterations Combination ##########
-########## oc coefficient under dstc model ##########
 library(boot) # use bootstrap to obtain CI due to non-normal distribution
 
 rm(list=ls())
@@ -139,28 +117,12 @@ for(i in task_class){
     ### fitted CHL
     fittedtemp <- mean(subtemp$fitted)
     ### trends (average betasp)
-    # trsp <- mean(betasp[tick,])
-    # trtptemp <- vector('numeric',length=304)
-    # for(k in c(1:304)){
-    #   trtptemp[k] <- mean(betatp[k,])
-    # }
-    # trtp <- mean(trtptemp)
+
     betasp[tick,] <- betasp[tick,]*100 # percent per month
     trtemp <- mean(betasp[tick,])
-    # trtemp <- mean(betasp_d$betasp[which(as.numeric(betasp_d$site)==tick)])
-    # trtemp <- mean(betasp_d$betasp[which(as.vector(betasp_d$site)==j)])
-    ### 95% credibility intervals for trend
-    # bounds <- c(trtemp-2*sd(betasp_d$betasp[which(as.numeric(betasp_d$site)==tick)]),
-    #             trtemp+2*sd(betasp_d$betasp[which(as.numeric(betasp_d$site)==tick)])) # Z=1.96
+
     bounds <- c(trtemp-2*sd(betasp[tick,]),trtemp+2*sd(betasp[tick,]))
-    ## One: another way for confident intervals
-    # ntemp <- length(betasp_d$betasp[which(as.numeric(betasp_d$site)==tick)])
-    # setemp <- sd(betasp_d$betasp[which(as.numeric(betasp_d$site)==tick)])/sqrt(ntemp)
-    # t.scoretemp <- qt(p=0.05/2,df=ntemp-1,lower.tail = F)
-    # margin.error <- t.scoretemp*setemp
-    # l.bound <- trtemp-margin.error
-    # u.bound <- trtemp+margin.error
-    ## Two: another way for confident intervals
+
     results <- boot(data=betasp[tick,], statistic=Bmean, R=1000) #tick
     citemp <- boot.ci(results, type="norm")
     l.bound <- citemp$normal[2]
@@ -171,14 +133,9 @@ for(i in task_class){
     }else{
       trtemp <- NA
     }
-    # if((l.bound>0 & u.bound>0) | (l.bound<0 & u.bound<0)){
-    #   trtemp <- trtemp
-    # }else{
-    #   trtemp <- NA
-    # }
+
     ### RMSE & NRMSE & Bias
     RMSE <- sqrt(mean((chltemp-fittedtemp)^2))
-    # nrmse.sd <- sqrt(mean(subtemp$fitted-subtemp$chl)^2)/sd(subtemp$chl)
     nrmse.maxmin <- sqrt(mean(subtemp$fitted-subtemp$chl)^2)/diff(range(subtemp$chl))
     Bias <- bias(fittedtemp,chltemp,type = "bias")
     ### results table
@@ -188,86 +145,8 @@ for(i in task_class){
     
   }
 }
-# results_tab <- results_tab[c(1:875),]
-# results_tab[,c(5:8)] <- results_tab[,c(5:8)]*100
+
 save(results_tab,file="oc_res_dstc_spT_tpoc_42resultTab.Rdata")
-# scp dzhai@storm.pmc.ucsc.edu:/home/dzhai/reduce_res/dstc_42/oc_res_dstc_spT_tpoc_42resultTab.Rdata ~/Coding/Dynamic_SPT/reduce_res
-# results_tab <- results_tab[c(1:1074),]
-# save(results_tab,file="oc_res_dstc_resultTab.Rdata")
-
-
-###############################################################################
-########## Part III. Iterations Combination (not use) ##########
-########## time trend under dstc model ##########
-library(boot) # use bootstrap to obtain CI due to non-normal distribution
-
-rm(list=ls())
-# setwd("/home/dzhai/reduce_res/dstc")
-setwd("~/Coding/Dynamic_SPT/reduce_res/dstc")
-# CI Bootstrapt function to obtain the mean
-Bmean <- function(data,indices) {
-  d <- data[indices] # allows boot to select sample 
-  return(mean(d))
-} 
-
-results_tab <- array(NA,dim=c(24,11)) 
-colnames(results_tab) <- c("OC","Trend_Value","Obs","Fitted","LCI","UCI","lci","uci","RMSE","NRMSE","Bias")
-obs_fit <- array(NA,dim=c(2592,4))
-colnames(obs_fit) <- c('Site','Obs','Fitted','OC')
-s=1
-for(i in c(1:24)){
-  filename <- paste0(i,"_res_dstc_df.Rdata")
-  load(filename)
-  model_input <- model_input[,c(1:10)]
-  model_input$fitted <- exp(fitted[,1])
-  
-  chltemp <- mean(model_input$chl)
-  fittedtemp <- mean(model_input$fitted)
-  
-  betap <- betap[2,]
-  trtemp <- mean(betap)
-  
-  ### 95% credibility intervals for trend
-  bounds <- c(trtemp-2*sd(betap),
-              trtemp+2*sd(betap))
-  
-  ## Two: another way for confident intervals
-  results <- boot(data=betap, statistic=Bmean, R=1000) #tick
-  citemp <- boot.ci(results, type="norm")
-  l.bound <- citemp$normal[2]
-  u.bound <- citemp$normal[3]
-  # determine if distribution does not contain 0
-  # if((bounds[1]>0 & bounds[2]>0) | (bounds[1]<0 & bounds[2]<0)){
-  #   trtemp <- trtemp
-  # }else{
-  #   trtemp <- NA
-  # }
-  if((l.bound>0 & u.bound>0) | (l.bound<0 & u.bound<0)){
-    trtemp <- trtemp
-  }else{
-    trtemp <- NA
-  }
-  ### RMSE & NRMSE & Bias
-  RMSE <- sqrt(mean((chltemp -fittedtemp)^2))
-  # nrmse.sd <- sqrt(mean(subtemp$fitted-subtemp$chl)^2)/sd(subtemp$chl)
-  nrmse.maxmin <- sqrt(mean(model_input$fitted-model_input$chl)^2)/diff(range(model_input$chl))
-  Bias <- bias(fittedtemp,chltemp,type = "bias")
-  ### results table
-  results_tab[i,] <- c(i,trtemp,chltemp,fittedtemp,bounds[1],bounds[2],l.bound,u.bound,RMSE,nrmse.maxmin,Bias)
-  
-  ### Parameters of current subset dataframe
-  tick=1
-  for(j in sub_site){
-    print(j)
-    subtemp <- model_input[which(model_input$s.index==j),]
-    obs_fit[s,] <- c(j,subtemp$chl[tick],subtemp$fitted[tick],i)
-    s <- s+1
-    tick <- tick+1
-  }
-}
-save(results_tab,obs_fit,file="oc_res_dstc_tr_resultTab.Rdata")
-
-# scp dzhai@storm.pmc.ucsc.edu:/home/dzhai/reduce_res/dstc/oc_res_dstc_tr_resultTab.Rdata ~/Coding/Dynamic_SPT/reduce_res
 
 ####
 # dstc
