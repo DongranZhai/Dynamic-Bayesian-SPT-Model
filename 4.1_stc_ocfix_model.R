@@ -1,7 +1,5 @@
-# Aug.14.2024: change to 28 gsoc
-# July.11.2024
 # Note: Build the Bayesian spatiotemporal model with dynamic optical class.
-#       I. Parallel Computation of STC
+#       Parallel Computation of STC
 
 library(bmstdr)
 library(spTDyn)
@@ -65,22 +63,10 @@ doParallelIteration <- function(i){
 # no_cores <- detectCores()
 ##### run
 registerDoParallel(13)
-foreach(i=iter(c(64, 60, 55, 51, 56, 18, 19, 14, 37, 47, 15, 48, 13),.packages="bmstdr")) %dopar% {
+foreach(i=iter(task_class,.packages="bmstdr")) %dopar% {
   doParallelIteration(i)
 }
 
-registerDoParallel(12)
-foreach(i=iter(c(32, 34, 42, 44, 43, 11, 45, 16,  9,  8, 22, 25),.packages="bmstdr")) %dopar% {
-  doParallelIteration(i)
-}
-
-registerDoParallel(11)
-foreach(i=iter(c(27, 28,  3,  5,  6,  4, 21, 24,210,2329,3358),.packages="bmstdr")) %dopar% {
-  doParallelIteration(i)
-}
-
-
-#scp -r dzhai@storm.pmc.ucsc.edu:/home/dzhai/reduce_res/stc_28 ~/Coding/Dynamic_SPT/reduce_res
 ########## Part II. Iterations Combination ##########
 ########## stc model ##########
 library(boot) # use bootstrap to obtain CI due to non-normal distribution
