@@ -3,21 +3,6 @@
 #                    Simplify the global ocean and sea table,
 #                    merging that just remain the five basins
 ############################################################################################
-library(ggplot2)
-library(oceanmap)
-library(rgdal)
-library(mapproj)
-library(munsell)
-library(scales)
-library(R.matlab)
-library(dplyr)
-library(Polychrome) # gsoc pallete
-
-rm(list=ls())
-setwd("~/Coding/Dynamic_SPT/reduce_res")
-
-##### Notes: Simplify the global ocean and sea table,
-#####        merging that just remain the five basins
 library(dplyr)
 library(rgdal) # real world map
 library(ggplot2)
